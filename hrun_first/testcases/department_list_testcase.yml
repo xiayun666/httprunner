@@ -1,0 +1,20 @@
+
+config:
+    name: "demo testcase"
+    variables:
+        device_sn: "ABC"
+        username: ${ENV(USERNAME)}
+        password: ${ENV(PASSWORD)}
+    base_url: "http://127.0.0.1:5000"
+
+teststeps:
+-
+    name: get_token
+    api: api/demo_api.yml
+    extract:
+        - access_token: content.access_token
+
+-
+    name: department_list
+    api: api/department_list.yml
+

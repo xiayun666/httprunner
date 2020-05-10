@@ -1,0 +1,13 @@
+
+name: get_token
+variables:
+    var1: value1
+    var2: value2
+request:
+    url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
+    method: GET
+    params:
+        corpid: ww325ccbe63ebb05e8
+        corpsecret: oOX06gCjYsjgH76w4T0rSO-JktsWKnMRIhdTFKiKKhk
+validate:
+    - eq: ["status_code", 200]
